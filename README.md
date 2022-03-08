@@ -6,7 +6,7 @@ Personal Repo for COMPSCI 401 Project 1, 22SP@DKU
 
 > This course covers cloud infrastructures, virtualization, distributed file system, software defined networks and storage, cloud storage, and programming models such as MapReduce and Spark
 
-## Project 1 - Big Data Programming Paradigms
+## Project 1: Big Data Programming Paradigms
 
 In this project, students will get experience with MapReduce, one of the earliest Big Data frameworks that have been adopted for use in cloud systems, and with Spark, one of the most popular successor alternatives to date.
 
