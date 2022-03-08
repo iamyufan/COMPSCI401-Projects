@@ -1,4 +1,4 @@
-# COMPSCI401-Proj1
+# COMPSCI401-Project1
 
 Personal Repo for COMPSCI 401 Project 1, 22SP@DKU
 
