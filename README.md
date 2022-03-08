@@ -1,4 +1,4 @@
-# COMPSCI401-Proj1
+# COMPSCI401-Project1
 
 Personal repo of DKU course COMPSCI 401 Project 1
 
