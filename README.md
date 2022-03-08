@@ -1,6 +1,6 @@
 # COMPSCI401-Proj1
 
-Personal repo of DKU course COMPSCI 401 Project 1
+Personal Repo for COMPSCI 401 Project 2, 22SP@DKU
 
 *Course Description*
 
