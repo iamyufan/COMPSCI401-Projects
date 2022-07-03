@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  REDIS_OUTPUT_KEY: yz605-proj3-output
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-03-06T05:38:11Z"
+  name: outputkey
+  namespace: yz605
+  resourceVersion: "4476436"
+  uid: 1d0d0d7d-dba8-4122-931d-1b14b269866c

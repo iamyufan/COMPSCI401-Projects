@@ -1,0 +1,23 @@
+apiVersion: v1
+data:
+  pyfile: "import datetime\nimport numpy as np\nimport time\nimport pandas as pd\n\ndef
+    handler(input, context):\n    out = dict()\n    timestamp = input['timestamp'][:19]\n
+    \   out['timestamp'] = timestamp\n\n    # the average utilization of each CPU\n
+    \   CPUs = ['cpu_percent-0', 'cpu_percent-1', 'cpu_percent-2', 'cpu_percent-3']\n
+    \   for CPU in CPUs:\n        # last hour\n        cpu_hr = context.env.get(CPU+'_hr',
+    [])\n        cpu_hr.append(input[CPU])\n        if len(cpu_hr) > 12:\n            cpu_hr.pop(0)\n
+    \       out[f'avg-{CPU}-1hour'] = round(np.mean(cpu_hr), 2)\n        context.env[CPU+'_hr']
+    = cpu_hr\n\n        # last minute\n        cpu_mi = context.env.get(CPU+'_mi',
+    [])\n        cpu_mi.append(input[CPU])\n        if len(cpu_mi) > 720:\n            cpu_mi.pop(0)\n
+    \       out[f'avg-{CPU}-60sec'] = round(np.mean(cpu_mi), 2)\n        context.env[CPU+'_mi']
+    = cpu_mi\n    \n    # the average utilization of each memory\n    mem = context.env.get('memory_mi',
+    [])\n    mem.append(input['virtual_memory-percent'])\n    if len(mem) > 12:\n
+    \       mem.pop(0)\n    out['avg-virtual_memory-60sec'] = round(np.mean(mem),
+    2)     \n    context.env['memory_mi'] = mem\n\n    return out"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-03-06T05:37:56Z"
+  name: pyfile
+  namespace: yz605
+  resourceVersion: "4476416"
+  uid: be7a9fc7-2059-46b3-acea-a6bc348c662f

@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yufan-american-predictor-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: yufan-american-predictor
+  template:
+    metadata:
+      labels:
+        app: yufan-american-predictor
+    spec:
+      containers:
+      - name: yufan-american-predictor
+        image: docker.io/helloyufan/american-predictor:0.3
+        ports:
+        - containerPort: 5016
