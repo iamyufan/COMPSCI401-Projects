@@ -2,10 +2,6 @@
 
 Personal Repo for COMPSCI 401 Project 2, 22SP@DKU
 
-*Course Description*
-
-> This course covers cloud infrastructures, virtualization, distributed file system, software defined networks and storage, cloud storage, and programming models such as MapReduce and Spark
-
 ## Project 2: DevOps and Cloud Computing
 
 1. Students will train an ML prediction model using the training.csv dataset.

@@ -2,10 +2,6 @@
 
 Personal Repo for COMPSCI 401 Project 3, 22SP@DKU
 
-*Course Description*
-
-> This course covers cloud infrastructures, virtualization, distributed file system, software defined networks and storage, cloud storage, and programming models such as MapReduce and Spark.
-
 ## Project 3: Serverless Computing and Monitoring Dashboard
 
 ### Task 1: Serveless Function and Runtime
